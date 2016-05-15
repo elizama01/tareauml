@@ -11,8 +11,47 @@ public class Departamento {
 	protected String Acronimo;
 
 	public Departamento() {
-		// TODO - implement Departamento.Departamento
-		throw new UnsupportedOperationException();
+		
 	}
+
+    public Collection<Docente> getTrabajan() {
+        return Trabajan;
+    }
+
+    public void setTrabajan(Collection<Docente> Trabajan) {
+        this.Trabajan = Trabajan;
+    }
+
+    public Docente getDirigen() {
+        return Dirigen;
+    }
+
+    public void setDirigen(Docente Dirigen) {
+        this.Dirigen = Dirigen;
+    }
+
+    public String getNombreDepartamento() {
+        return NombreDepartamento;
+    }
+
+    public void setNombreDepartamento(String NombreDepartamento) {
+        this.NombreDepartamento = NombreDepartamento;
+    }
+
+    public String getEspecialidad() {
+        return Especialidad;
+    }
+
+    public void setEspecialidad(String Especialidad) {
+        this.Especialidad = Especialidad;
+    }
+
+    public String getAcronimo() {
+        return Acronimo;
+    }
+
+    public void setAcronimo(String Acronimo) {
+        this.Acronimo = Acronimo;
+    }
 
 }

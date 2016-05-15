@@ -1,13 +1,15 @@
 package pacUfro;
 
+import java.util.Calendar;
+
 public class Persona {
-       
+       protected int Edad;
 	protected String Nombre;
 	protected String Apellido;
 	protected String Rut;
-        protected String Nacimiento;
+        protected int Nacimiento;
 	protected String Numerotelefonico;
-        protected Direccion direc;
+       protected Direccion direc=new Direccion("","","","","","");
 
     public Direccion getDirec() {
         return direc;
@@ -16,14 +18,13 @@ public class Persona {
     public void setDirec(Direccion direc) {
         this.direc = direc;
     }
+
+ 
        
         public Persona() {
 	
 	}
-        public void AgregarDireccion(Direccion direc){
-       this.direc=direc;
-            
-        }
+       
     public String getNombre() {
         return Nombre;
     }
@@ -48,13 +49,22 @@ public class Persona {
         this.Rut = Rut;
     }
 
-    public String getNacimiento() {
+    public int getNacimiento() {
         return Nacimiento;
     }
 
-    public void setNacimiento(String Nacimiento) {
+    public int getEdad() {
+        return Edad;
+    }
+
+    public void setEdad(int Edad) {
+        this.Edad = Edad;
+    }
+
+    public void setNacimiento(int Nacimiento) {
         this.Nacimiento = Nacimiento;
     }
+
 
     public String getNumerotelefonico() {
         return Numerotelefonico;
@@ -64,14 +74,32 @@ public class Persona {
         this.Numerotelefonico = Numerotelefonico;
     }
  
-	
+	public  void MostrarDatosPersona(){
+         	
+	    System.out.println("Nombre "+ Nombre);
+            System.out.println("Apellido "+ Apellido);
+            System.out.println("Rut "+ Rut);
+           CalcularEdad();
+            System.out.println("Direccion ");
+            System.out.println("Nombre "+direc.getCalle());
+            System.out.println("Comuna "+direc.getComuna());
+            System.out.println("Numero De Departamento "+direc.getNumDepartamento());
+            System.out.println("Numero de edificio "+direc.getNumEdificio());
+            System.out.println("Numero de casa "+direc.getNumero());
+            System.out.println("Villa/poblacion "+direc.getVillaPoblacion());
+           
+        
+        
+        }
  
 	
 
 	public void CalcularEdad() {
-		// TODO - implement Persona.CalcularEdad
-		
-	}
+	  Calendar ca1=Calendar.getInstance();
+          int Agno=ca1.get(Calendar.YEAR);
+	  Edad=Agno-Nacimiento;
+          System.out.println("La edad es "+Edad+" Años");
+        }
 
 	
 }

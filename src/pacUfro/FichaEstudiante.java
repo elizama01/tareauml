@@ -1,12 +1,15 @@
 package pacUfro;
+
+
+
 public class FichaEstudiante {
 
 	private String NumeroMatricula;
         private  Estudiante Alumn;
-	
-        public FichaEstudiante() {
-        this.Alumn = new Estudiante();
+    
+        public FichaEstudiante( Estudiante Alumn) {
       
+      this.Alumn=Alumn;
 	
             
         }
@@ -32,9 +35,9 @@ public class FichaEstudiante {
 	    System.out.println("Nombre "+ Alumn.getNombre());
             System.out.println("Apellido "+Alumn.getApellido());
             System.out.println("Rut "+ Alumn.getRut());
-            System.out.println("Año de ingreso "+Alumn.getAgnoIngreso());
-            System.out.println("Nombre de Carrera "+Alumn.getCarre().getNomCarrera() );
-            System.out.println("Codigo de Carrera "+Alumn.getCarre().getCodigo());
+            System.out.println("Año de ingreso 20"+Alumn.getAgnoIngreso());
+            System.out.println("Nombre de Carrera "+Alumn.carre.getNomCarrera() );
+            System.out.println("Codigo de Carrera "+Alumn.carre.getCodigo());
             NumeroMatricula();
             System.out.println("Direccion ");
             System.out.println("Nombre "+Alumn.direc.getCalle());
@@ -43,13 +46,13 @@ public class FichaEstudiante {
             System.out.println("Numero de edificio "+Alumn.direc.getNumEdificio());
             System.out.println("Numero de casa "+Alumn.direc.getNumero());
             System.out.println("Villa/poblacion "+Alumn.direc.getVillaPoblacion());
-       
+            Alumn.CalcularEdad();
              }
 
-	private void NumeroMatricula() {
+	public void NumeroMatricula() {
 		// TODO - implement FichaEstudiante.NumeroMatricula
 NumeroMatricula="El Numero De Matricula es:"+Alumn.Rut+""+Alumn.AgnoIngreso;
-	
+	           System.out.println(""+NumeroMatricula );
         }
 
 	

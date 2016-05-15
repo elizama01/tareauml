@@ -30,17 +30,18 @@ public class Carrera {
         this.NomCarrera = NomCarrera;
     }
 
-    public ArrayList<Estudiante> getAlum() {
-        return alum;
+    public ArrayList<Estudiante> getAlumosCArrera() {
+        return alumosCArrera;
     }
 
-    public void setAlum(ArrayList<Estudiante> alum) {
-        this.alum = alum;
+    public void setAlumosCArrera(ArrayList<Estudiante> alumosCArrera) {
+        this.alumosCArrera = alumosCArrera;
     }
-        protected String Codigo;
-	protected String Descripcion;
-	protected String NomCarrera;
-    ArrayList<Estudiante>alum;
+	protected String NomCarrera="";
+        private ArrayList<Estudiante>alumosCArrera;
+        protected String Codigo="";
+	protected String Descripcion="";
+
 	public Carrera() {
 		// TODO - implement Carrera.Carrera
 		

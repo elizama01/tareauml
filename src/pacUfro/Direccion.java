@@ -57,8 +57,15 @@ public class Direccion {
 	protected String Comuna;
 	protected String Calle;
    
-        public Direccion() {
+        public Direccion(String Calle,String Comuna,
+                String NumEdificio,String NumDepartamento,String NumeroCasa,String VillaPoblacion) {
    
-    }
+    this.Calle=Calle;
+    this.Comuna=Comuna;
+    this.NumDepartamento=NumDepartamento;
+    this.NumEdificio=NumEdificio;
+    this.NumeroCasa=NumeroCasa;
+    this.VillaPoblacion=VillaPoblacion;
+        }
 
 }

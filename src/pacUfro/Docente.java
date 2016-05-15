@@ -5,38 +5,36 @@ public class Docente extends Trabajador {
 	Departamento Director;
 	protected String TituloProfesional;
 	protected String Especializacion;
+        Curso cursodocente;
+    public Departamento getDirector() {
+        return Director;
+    }
+
+    public void setDirector(Departamento Director) {
+        this.Director = Director;
+    }
+
+    public String getTituloProfesional() {
+        return TituloProfesional;
+    }
+
+    public void setTituloProfesional(String TituloProfesional) {
+        this.TituloProfesional = TituloProfesional;
+    }
+
+    public String getEspecializacion() {
+        return Especializacion;
+    }
+
+    public void setEspecializacion(String Especializacion) {
+        this.Especializacion = Especializacion;
+    }
 
 	public Docente() {
-		// TODO - implement Docente.Docente
-		throw new UnsupportedOperationException();
+        this.cursodocente = new Curso();
+		
 	}
 
-	public String getTituloProfesional() {
-		// TODO - implement Docente.getTituloProfesional
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param TituloProfesional
-	 */
-	public void setTituloProfesional(String TituloProfesional) {
-		// TODO - implement Docente.setTituloProfesional
-		throw new UnsupportedOperationException();
-	}
-
-	public String getEspecializacion() {
-		// TODO - implement Docente.getEspecializacion
-		throw new UnsupportedOperationException();
-	}
-
-	/**
-	 * 
-	 * @param Especializacion
-	 */
-	public void setEspecializacion(String Especializacion) {
-		// TODO - implement Docente.setEspecializacion
-		throw new UnsupportedOperationException();
-	}
+	
 
 }
